@@ -1,33 +1,29 @@
-pipeline{
-  agent any
-tools
-{
-  jdk "jdk21"
-}
-stages
-{
-  stage('checkout')
-{
-  steps
-{
-  git branch:"main",url:"https://github.com/vs1ms24mc107-wq/col"
-}
-}
-stage('compile')
-{
-  steps
-  {
-      echo "compiling"
-      sh "javac Vv.java"
-  }
-}
-stage('run')
-{
-  steps
-  {
-    echo "running the file"
-    sh "java Vv.java
-  }
-}
-}
+pipeline {
+    agent any
+
+    tools {
+        jdk "jdk21"
+    }
+
+    stages {
+        stage('checkout') {
+            steps {
+                git branch: "main", url: "https://github.com/vs1ms24mc107-wq/col"
+            }
+        }
+
+        stage('compile') {
+            steps {
+                echo "compiling"
+                sh "javac Vv.java"
+            }
+        }
+
+        stage('run') {
+            steps {
+                echo "running the file"
+                sh "java Vv"
+            }
+        }
+    }
 }
