@@ -10,7 +10,7 @@ stages
 {
   steps
 {
-  git branch:"main",url:"https://github.com/vs1ms24mc107-wq/col.git"
+  git branch:"main",url:"https://github.com/vs1ms24mc107-wq/col"
 }
 }
 stage('compile')
